@@ -27,7 +27,11 @@ A modern, interactive real estate property discovery interface built with Next.j
   - Name, Mobile, Email, Message fields
   - Form validation
   - Success/Error feedback
-- **Color-Coded Markers** - Different colors for each property type
+- **Bonus Features**:
+  - Color-Coded Markers - Different colors for each property type
+  - User Geolocation - "Search near me" button
+  - Filter Chips + Clear All
+  - Toggle between Map View / List View
 - **Responsive Design** - Works on desktop, tablet, and mobile
 
 ## 🚀 Getting Started
@@ -71,9 +75,10 @@ real-estate-map/
 │   └── page.tsx                  # Main page component
 ├── components/
 │   ├── Map.tsx                   # Interactive map with Leaflet
-│   ├── Filters.tsx               # Filter component
+│   ├── Filters.tsx               # Filter component with geolocation
 │   ├── PropertyDetails.tsx       # Property details drawer
-│   └── EnquiryForm.tsx          # Enquiry form modal
+│   ├── EnquiryForm.tsx          # Enquiry form drawer
+│   └── ListView.tsx             # List view component
 ├── data/
 │   └── properties.json          # Sample property data with lat/lng
 ├── types/
@@ -139,6 +144,7 @@ Submit a property enquiry.
 - Dropdown filters for type, sale mode, and usage
 - Price range inputs (min/max)
 - Location text search
+- **📍 "Near Me" button** - Get user location and sort by distance
 - Active filter chips display
 - Show/Hide filters toggle
 - Clear all filters button
@@ -149,14 +155,22 @@ Submit a property enquiry.
 - Comprehensive property information
 - "Send Enquiry" CTA button
 - Responsive design
+- Side-by-side with map on desktop
 
 ### 4. Enquiry Form
-- Modal overlay design
+- Drawer design (similar to property details)
 - Form validation (required fields)
 - Mobile number pattern validation (10 digits)
 - Email validation
 - Success/error feedback messages
 - Auto-close on successful submission
+- Side-by-side with map on desktop
+
+### 5. View Toggle
+- **🗺️ Map View** - Interactive map with colored markers
+- **📋 List View** - Grid of property cards
+- Seamless switching between views
+- Responsive grid layout for list view
 
 ## 📊 Sample Data
 
@@ -181,19 +195,6 @@ Each property includes:
 - **Maps:** Leaflet + React Leaflet
 - **Map Tiles:** OpenStreetMap (free, no API key)
 - **Images:** Unsplash (royalty-free)
-
-## 🎯 Future Enhancements (Optional)
-
-- [ ] User geolocation - "Search near me" feature
-- [ ] Toggle between Map View / List View
-- [ ] Save favorite properties
-- [ ] Compare properties side-by-side
-- [ ] Integration with MongoDB for persistent data
-- [ ] User authentication
-- [ ] Property owner dashboard
-- [ ] Email notifications for enquiries
-- [ ] Advanced search with more filters
-- [ ] Property image upload
 
 ## 🐛 Development
 
@@ -267,6 +268,7 @@ Built as a MERN + Next.js developer task demonstrating:
 - Form handling and validation
 - Component composition
 - State management
+- Geolocation API integration
 
 ---
 

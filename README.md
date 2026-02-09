@@ -1,36 +1,273 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real Estate Map Viewer
 
-## Getting Started
+A modern, interactive real estate property discovery interface built with Next.js, React, TypeScript, and Leaflet. Users can view properties on an interactive map, apply advanced filters, and submit enquiries.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### ✅ Core Features Implemented
+- **Interactive Map View** using Leaflet with OpenStreetMap
+- **Property Categories**:
+  - Types: Land, Plot, Flat, Villa, Office, Shop, Warehouse
+  - Sale Modes: Fresh, Resale
+  - Usage: Residential, Commercial
+- **Advanced Filters**:
+  - Property Type
+  - Sale Mode
+  - Usage Type
+  - Budget Range (Min/Max Price)
+  - Location Search (City/Locality)
+  - Active Filter Chips with Clear All option
+- **Property Details Panel** - Slide-in drawer with:
+  - Image gallery with navigation
+  - Price, area, and location details
+  - Property attributes (type, sale mode, usage)
+  - Latitude & Longitude display
+  - Full description
+- **Enquiry Form** - Modal with validation:
+  - Name, Mobile, Email, Message fields
+  - Form validation
+  - Success/Error feedback
+- **Color-Coded Markers** - Different colors for each property type
+- **Responsive Design** - Works on desktop, tablet, and mobile
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ and npm installed
+- Git (optional, for cloning)
+
+### Installation
+
+1. **Navigate to the project directory:**
+   ```bash
+   cd real-estate-map
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+real-estate-map/
+├── app/
+│   ├── api/
+│   │   ├── properties/
+│   │   │   └── route.ts          # GET /api/properties - Fetch filtered properties
+│   │   └── enquiry/
+│   │       └── route.ts          # POST /api/enquiry - Submit enquiry
+│   ├── globals.css               # Global styles
+│   ├── layout.tsx                # Root layout
+│   └── page.tsx                  # Main page component
+├── components/
+│   ├── Map.tsx                   # Interactive map with Leaflet
+│   ├── Filters.tsx               # Filter component
+│   ├── PropertyDetails.tsx       # Property details drawer
+│   └── EnquiryForm.tsx          # Enquiry form modal
+├── data/
+│   └── properties.json          # Sample property data with lat/lng
+├── types/
+│   └── property.ts              # TypeScript type definitions
+├── public/                      # Static assets
+└── package.json                 # Dependencies
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗺️ API Endpoints
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### GET `/api/properties`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Fetch properties with optional filters.
 
-## Learn More
+**Query Parameters:**
+- `type` - Property type (Land, Plot, Flat, Villa, Office, Shop, Warehouse)
+- `saleMode` - Sale mode (Fresh, Resale)
+- `usage` - Usage type (Residential, Commercial)
+- `minPrice` - Minimum price in rupees
+- `maxPrice` - Maximum price in rupees
+- `location` - Search by city or locality
 
-To learn more about Next.js, take a look at the following resources:
+**Example:**
+```
+GET /api/properties?type=Flat&usage=Residential&minPrice=10000000&maxPrice=25000000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### POST `/api/enquiry`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Submit a property enquiry.
 
-## Deploy on Vercel
+**Request Body:**
+```json
+{
+  "name": "John Doe",
+  "mobile": "9876543210",
+  "email": "john@example.com",
+  "message": "Interested in this property",
+  "propertyId": 1
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Enquiry submitted successfully",
+  "enquiry": { /* enquiry data */ }
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Features Breakdown
+
+### 1. Map Component
+- Uses Leaflet with OpenStreetMap tiles (free, no API key required)
+- Custom color-coded markers for each property type
+- Marker popups with quick property info
+- Click-to-view-details functionality
+- Auto-fit bounds to show all properties
+- Zoom and pan controls
+
+### 2. Filters Component
+- Dropdown filters for type, sale mode, and usage
+- Price range inputs (min/max)
+- Location text search
+- Active filter chips display
+- Show/Hide filters toggle
+- Clear all filters button
+
+### 3. Property Details Drawer
+- Slide-in from right side
+- Image gallery with prev/next navigation
+- Comprehensive property information
+- "Send Enquiry" CTA button
+- Responsive design
+
+### 4. Enquiry Form
+- Modal overlay design
+- Form validation (required fields)
+- Mobile number pattern validation (10 digits)
+- Email validation
+- Success/error feedback messages
+- Auto-close on successful submission
+
+## 📊 Sample Data
+
+The application includes 10 sample properties across major Indian cities:
+- Mumbai (Andheri West, Bandra West, Bhiwandi)
+- Bangalore (HSR Layout, Whitefield, Koramangala, Electronic City)
+- Pune (Ring Road)
+- Hyderabad (Gachibowli)
+- Delhi (Connaught Place)
+
+Each property includes:
+- Precise latitude & longitude coordinates
+- High-quality images from Unsplash
+- Realistic pricing and area details
+- Comprehensive descriptions
+
+## 🔧 Technologies Used
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Maps:** Leaflet + React Leaflet
+- **Map Tiles:** OpenStreetMap (free, no API key)
+- **Images:** Unsplash (royalty-free)
+
+## 🎯 Future Enhancements (Optional)
+
+- [ ] User geolocation - "Search near me" feature
+- [ ] Toggle between Map View / List View
+- [ ] Save favorite properties
+- [ ] Compare properties side-by-side
+- [ ] Integration with MongoDB for persistent data
+- [ ] User authentication
+- [ ] Property owner dashboard
+- [ ] Email notifications for enquiries
+- [ ] Advanced search with more filters
+- [ ] Property image upload
+
+## 🐛 Development
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Start Production Server
+```bash
+npm start
+```
+
+### Lint Code
+```bash
+npm run lint
+```
+
+## 📝 Notes
+
+### Adding More Properties
+
+Edit `/data/properties.json` and add new entries with this structure:
+
+```json
+{
+  "id": 11,
+  "title": "Property Title",
+  "type": "Flat",
+  "saleMode": "Fresh",
+  "usage": "Residential",
+  "price": 25000000,
+  "area": 1200,
+  "city": "Mumbai",
+  "locality": "Powai",
+  "lat": 19.1176,
+  "lng": 72.9060,
+  "images": [
+    "https://images.unsplash.com/photo-example?w=800&h=600&fit=crop"
+  ],
+  "description": "Property description here..."
+}
+```
+
+### Finding Latitude & Longitude
+
+Use any of these free tools:
+- Google Maps: Right-click on location → "What's here?"
+- [latlong.net](https://www.latlong.net/)
+- OpenStreetMap: Click on location to see coordinates
+
+### Database Integration
+
+To connect to MongoDB:
+1. Install MongoDB driver: `npm install mongodb`
+2. Update `/app/api/properties/route.ts` to fetch from database
+3. Update `/app/api/enquiry/route.ts` to save enquiries to database
+
+## 📄 License
+
+This project is open source and available for educational purposes.
+
+## 👨‍💻 Developer
+
+Built as a MERN + Next.js developer task demonstrating:
+- Modern React patterns with hooks
+- TypeScript for type safety
+- Next.js App Router and API routes
+- Interactive map integration
+- Responsive UI/UX design
+- Form handling and validation
+- Component composition
+- State management
+
+---
+
+**Ready to discover your dream property? Start the dev server and explore!** 🏠✨

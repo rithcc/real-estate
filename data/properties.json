@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "title": "2BHK Flat in Andheri West",
+    "type": "Flat",
+    "saleMode": "Resale",
+    "usage": "Residential",
+    "price": 16500000,
+    "area": 950,
+    "city": "Mumbai",
+    "locality": "Andheri West",
+    "lat": 19.1295,
+    "lng": 72.8346,
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop"
+    ],
+    "description": "Well maintained 2BHK flat near metro station with modern amenities and excellent connectivity."
+  },
+  {
+    "id": 2,
+    "title": "Commercial Office Space – HSR Layout",
+    "type": "Office",
+    "saleMode": "Fresh",
+    "usage": "Commercial",
+    "price": 42000000,
+    "area": 2200,
+    "city": "Bangalore",
+    "locality": "HSR Layout",
+    "lat": 12.9121,
+    "lng": 77.6446,
+    "images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop"
+    ],
+    "description": "Newly built commercial office space with parking, power backup, and modern infrastructure."
+  },
+  {
+    "id": 3,
+    "title": "Open Land for Sale – Pune Ring Road",
+    "type": "Land",
+    "saleMode": "Fresh",
+    "usage": "Residential",
+    "price": 8000000,
+    "area": 5000,
+    "city": "Pune",
+    "locality": "Ring Road",
+    "lat": 18.5204,
+    "lng": 73.8567,
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop"
+    ],
+    "description": "Road-touch open land ideal for investment and future development with clear title."
+  },
+  {
+    "id": 4,
+    "title": "Luxury Villa in Whitefield",
+    "type": "Villa",
+    "saleMode": "Fresh",
+    "usage": "Residential",
+    "price": 95000000,
+    "area": 4500,
+    "city": "Bangalore",
+    "locality": "Whitefield",
+    "lat": 12.9698,
+    "lng": 77.7499,
+    "images": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop"
+    ],
+    "description": "Spacious 4BHK villa with private garden, swimming pool, and premium amenities."
+  },
+  {
+    "id": 5,
+    "title": "Residential Plot in Gachibowli",
+    "type": "Plot",
+    "saleMode": "Fresh",
+    "usage": "Residential",
+    "price": 12000000,
+    "area": 2400,
+    "city": "Hyderabad",
+    "locality": "Gachibowli",
+    "lat": 17.4399,
+    "lng": 78.3487,
+    "images": [
+      "https://images.unsplash.com/photo-1464146072230-91cabc968266?w=800&h=600&fit=crop"
+    ],
+    "description": "HMDA approved residential plot in prime IT corridor with all utilities available."
+  },
+  {
+    "id": 6,
+    "title": "Retail Shop in Connaught Place",
+    "type": "Shop",
+    "saleMode": "Resale",
+    "usage": "Commercial",
+    "price": 55000000,
+    "area": 800,
+    "city": "Delhi",
+    "locality": "Connaught Place",
+    "lat": 28.6315,
+    "lng": 77.2167,
+    "images": [
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop"
+    ],
+    "description": "Premium retail shop in central business district with high footfall and parking."
+  },
+  {
+    "id": 7,
+    "title": "Industrial Warehouse in Bhiwandi",
+    "type": "Warehouse",
+    "saleMode": "Fresh",
+    "usage": "Commercial",
+    "price": 38000000,
+    "area": 15000,
+    "city": "Mumbai",
+    "locality": "Bhiwandi",
+    "lat": 19.2969,
+    "lng": 73.0584,
+    "images": [
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop"
+    ],
+    "description": "Large industrial warehouse with loading dock, security, and excellent connectivity to highways."
+  },
+  {
+    "id": 8,
+    "title": "3BHK Flat in Koramangala",
+    "type": "Flat",
+    "saleMode": "Resale",
+    "usage": "Residential",
+    "price": 22500000,
+    "area": 1450,
+    "city": "Bangalore",
+    "locality": "Koramangala",
+    "lat": 12.9352,
+    "lng": 77.6245,
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop"
+    ],
+    "description": "Spacious 3BHK apartment in prime location with clubhouse, gym, and swimming pool."
+  },
+  {
+    "id": 9,
+    "title": "Commercial Land in Electronic City",
+    "type": "Land",
+    "saleMode": "Fresh",
+    "usage": "Commercial",
+    "price": 65000000,
+    "area": 8000,
+    "city": "Bangalore",
+    "locality": "Electronic City",
+    "lat": 12.8456,
+    "lng": 77.6603,
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop"
+    ],
+    "description": "Prime commercial land in IT hub suitable for corporate office or tech park development."
+  },
+  {
+    "id": 10,
+    "title": "Penthouse in Bandra West",
+    "type": "Flat",
+    "saleMode": "Fresh",
+    "usage": "Residential",
+    "price": 125000000,
+    "area": 3500,
+    "city": "Mumbai",
+    "locality": "Bandra West",
+    "lat": 19.0596,
+    "lng": 72.8295,
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+    ],
+    "description": "Luxury penthouse with panoramic sea view, private terrace, and ultra-premium amenities."
+  }
+]
